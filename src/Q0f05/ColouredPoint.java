@@ -1,5 +1,7 @@
 package src.Q0f05;
 
+import java.util.Objects;
+
 public class ColouredPoint extends Point {
 
   private final String hex;
@@ -12,5 +14,15 @@ public class ColouredPoint extends Point {
   @Override
   public String toString() {
     return super.toString() + " Colour: " + hex;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    return (o instanceof ColouredPoint cp) && super.equals(cp) && hex.equals(cp.hex);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(hex);
   }
 }

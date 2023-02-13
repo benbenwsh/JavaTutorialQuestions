@@ -33,6 +33,11 @@ public class Point {
     return "(" + x + ", " + y + ", " + z + ")";
   }
 
-
+  // short-circuit evaluation
+  // Other than boolean operators, JVM mainly uses strict evaluation
+  @Override
+  public boolean equals(Object obj) {
+    return (obj instanceof Point point) && (x == point.x && y == point.y && z == point.z);
+  }
 }
 
