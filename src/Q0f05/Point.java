@@ -39,5 +39,7 @@ public class Point {
   public boolean equals(Object obj) {
     return (obj instanceof Point point) && (x == point.x && y == point.y && z == point.z);
   }
+
+
 }
 
