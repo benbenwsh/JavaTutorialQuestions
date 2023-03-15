@@ -40,6 +40,9 @@ public class Point {
     return (obj instanceof Point point) && (x == point.x && y == point.y && z == point.z);
   }
 
-
+  @Override
+  public int hashCode() {
+    return (int) (x + y + z);
+  }
 }
 

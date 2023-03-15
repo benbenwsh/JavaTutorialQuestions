@@ -21,8 +21,4 @@ public class ColouredPoint extends Point {
     return (o instanceof ColouredPoint cp) && super.equals(cp) && hex.equals(cp.hex);
   }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(hex);
-  }
 }
